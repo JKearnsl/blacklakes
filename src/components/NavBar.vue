@@ -62,12 +62,15 @@ export default {
       </div>
 
       <!-- Mobile Menu -->
-      <div v-if="isMenuOpen" class="sm:hidden shadow-md text-sm">
-        <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-          <a href="/" class="">Home</a>
-          <a href="/merch" class="">Merch</a>
-          <a href="/music" class="">Music</a>
-          <a href="/contact" class="">Contact</a>
+      <div
+        v-if="isMenuOpen"
+        class="sm:hidden fixed inset-0 z-40 bg/95 backdrop-blur flex items-center justify-center"
+      >
+        <div class="flex flex-col items-center space-y-8 text-2xl font-medium">
+          <a href="/" @click="toggleMenu">Home</a>
+          <a href="/merch" @click="toggleMenu">Merch</a>
+          <a href="/music" @click="toggleMenu">Music</a>
+          <a href="/contact" @click="toggleMenu">Contact</a>
         </div>
       </div>
     </nav>
