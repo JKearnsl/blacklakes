@@ -52,8 +52,7 @@ export default {
             @click="toggleMenu"
             aria-label="Открыть меню"
         >
-          <MenuIcon v-if="!isMenuOpen" />
-          <XIcon v-else />
+          <MenuIcon />
         </Button>
         <a href="/" class="absolute left-1/2 -translate-x-1/2">
           <img src="/logo.svg" alt="ЧЕРНЫЕ ОЗЕРА" width="50" height="50" />
@@ -66,6 +65,15 @@ export default {
         v-if="isMenuOpen"
         class="sm:hidden fixed inset-0 z-40 bg/95 backdrop-blur flex items-center justify-center"
       >
+        <Button
+          variant="link"
+          size="icon"
+          class="absolute top-4 left-4"
+          @click="toggleMenu"
+          aria-label="Закрыть меню"
+        >
+          <XIcon />
+        </Button>
         <div class="flex flex-col items-center space-y-8 text-2xl font-medium">
           <a href="/" @click="toggleMenu">Home</a>
           <a href="/merch" @click="toggleMenu">Merch</a>
