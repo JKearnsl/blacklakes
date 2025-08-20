@@ -1,16 +1,20 @@
 ---
 import '../styles/global.css';
-const { content } = Astro.props;
+import NavBar from '../components/NavBar.vue';
+
+const { title } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{content.title}</title>
+		<title>{title} | ЧЕРНЫЕ ОЗЕРА</title>
 	</head>
 	<body>
-		<slot />
+        <NavBar client:load />
+        <main><slot /></main>
+
 	</body>
 </html>
