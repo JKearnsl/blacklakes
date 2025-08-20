@@ -45,7 +45,7 @@ export default {
       </div>
 
       <!-- Mobile Menu Button (below sm) -->
-      <div class="sm:hidden flex items-center w-full">
+      <div class="sm:hidden relative flex items-center w-full">
         <Button
             variant="link"
             size="icon"
@@ -55,10 +55,10 @@ export default {
           <MenuIcon v-if="!isMenuOpen" />
           <XIcon v-else />
         </Button>
-        <a href="/" class="flex-1 text-center">
+        <a href="/" class="absolute left-1/2 -translate-x-1/2">
           <img src="/logo.svg" alt="ЧЕРНЫЕ ОЗЕРА" width="50" height="50" />
         </a>
-        <div class="w-6"></div> <!-- Spacer for symmetry -->
+        <div class="w-6"></div>
       </div>
 
       <!-- Mobile Menu -->
